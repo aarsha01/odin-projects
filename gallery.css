@@ -1,0 +1,154 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(135deg, #f4c2c2, #eac1d5);
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Gallery Item */
+.gallery-item {
+    width: 22%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.2);
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Description Box */
+.description {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Show description on hover */
+.gallery-item:hover .description {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* Video Section Container */
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;  /* Space between videos */
+    margin: 50px auto;
+}
+
+/* Main Video Player Container */
+.video-player-container {
+    flex: 2;  /* Main video takes up more space */
+    width: 60%;  /* Set main video size */
+    margin: 0 auto;
+    padding: 10px;
+    border: 5px solid #704c5e; /* Dark border */
+    border-radius: 10px;
+    background-color: #f8d8d8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Resize Main Video */
+.video-player-container video {
+    width: 100%;  /* Full width within container */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Small Circular Video Containers */
+.circular-video-container {
+    flex: 1;  /* Smaller videos take up less space */
+    width: 20%;
+    position: relative;
+    padding: 10px;
+    border: 5px solid #704c5e;
+    border-radius: 50%;  /* Makes the video circular */
+    background-color: #f8d8d8;
+  
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Circular Videos */
+.circular-video-container video {
+    width: 65%;
+    height: auto;
+    border-radius: 50%;  /* Circular shape for video */
+    object-fit: cover;
+}

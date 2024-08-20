@@ -1,0 +1,176 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(135deg, #f4c2c2, #eac1d5);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styling */
+.container {
+    width: 98%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Styling */
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #704c5e;
+    margin: 0;
+}
+
+.navigation {
+    margin-top: 10px;
+}
+
+.navigation a {
+    color: #704c5e;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #eac1d5;
+}
+
+/* Decorative Frame Styling */
+.decorative-frame {
+    border: 2px solid #e0b7c4;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 15px rgba(255, 192, 203, 0.5), 0 0 25px rgba(255, 182, 193, 0.3);
+}
+
+/* Main Title Styling with Gradient Text */
+.main-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    margin: 0 0 10px;
+    background: linear-gradient(45deg, #eac1d5, #f4c2c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Description Styling */
+.description {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 20px;
+
+    animation: fadeIn 1.5s ease-out;
+    line-height: 1.6; /* Increased line height for better readability */
+    text-align: left;
+    padding: 10px; /* Add padding to give the text room to breathe */
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+/* Call-to-Action Button Styling */
+.cta-button {
+    background: #eac1d5;
+    color: #704c5e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 182, 193, 0.5);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInButton 2s ease-out;
+}
+
+.cta-button:hover {
+    background: #f4c2c2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 192, 203, 0.7);
+}
+
+/* Decorative Divider Styling */
+.decorative-divider {
+    border: none;
+    border-top: 2px solid #e0b7c4;
+    margin: 20px auto;
+    width: 60%;
+    position: relative;
+}
+
+.decorative-divider::before, .decorative-divider::after {
+    content: '✦';
+    font-size: 0.5 rem;
+    color: #eac1d5;
+    position: absolute;
+}
+
+.decorative-divider::before {
+    left: 10px;
+    top: -12px;
+}
+
+.decorative-divider::after {
+    right: 10px;
+    top: -12px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Fade-In with Slide-Up for Letter Box */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply to Description */
+.description {
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Custom Cursor */
+body {
+    cursor: url('vibrant-blue-butterfly-illustration/724a0f5a-9b72-4577-a987-94c49e0f0c86.jpg'), auto;
+}
